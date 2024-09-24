@@ -63,13 +63,13 @@ const NewArrival = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center py-10 sm:py-2 font-indif">
+    <div className="w-full flex flex-col items-center justify-center py-10 sm:py-2 font-corm">
       {/* Text Section */}
       <div className="text-center mb-6 px-4">
         <h2 className="text-[20px] md:text-[25px] mt-[40px] mb-2 font-semibold uppercase">
           Divinity Through Design
         </h2>
-        <p className="text-[16px] md:text-[20px] font-gara font-semibold text-gray-600">
+        <p className="text-[16px] md:text-[20px] font-juli font-semibold text-gray-600">
           Elegant, Effortless & Handcrafted for Celebrations.
         </p>
       </div>
@@ -82,7 +82,7 @@ const NewArrival = () => {
         >
           &lt;
         </button>
-        <h1 className="text-[20px] md:text-[25px] font-indif mb-2 cursor-pointer font-semibold">
+        <h1 className="text-[20px] md:text-[25px] font-corm mb-2 cursor-pointer font-semibold">
           New Arrival
         </h1>
         <button
@@ -97,7 +97,7 @@ const NewArrival = () => {
       <div className="text-center mb-6 md:mb-10">
         <Link
           to="/collection"
-          className="text-black text-md md:text-lg hover:underline font-gara font-semibold"
+          className="text-black text-md md:text-lg hover:underline font-juli font-semibold"
         >
           View All
         </Link>
@@ -153,11 +153,11 @@ const NewArrival = () => {
               )}
 
               <div className="ml-2 md:ml-4 mb-2 py-2 md:py-4">
-                <h2 className="text-sm sm:text-md md:text-lg font-indif font-bold">
+                <h2 className="text-sm sm:text-md md:text-lg font-corm font-bold">
                   {item.name}
                 </h2>{" "}
                 {/* Responsive text size */}
-                <p className="text-gray-500 font-gara font-semibold">
+                <p className="text-gray-500 font-juli font-semibold">
                   Rs. {item.price}
                 </p>{" "}
                 {/* Responsive price text */}

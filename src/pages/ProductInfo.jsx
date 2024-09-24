@@ -186,7 +186,7 @@ const ProductInfo = () => {
   return (
     <>
       <ToastContainer position="top-center" />
-      <div className="container mx-auto p-5 mt-24 overflow-x-hidden font-indif">
+      <div className="container mx-auto p-5 mt-24 overflow-x-hidden font-corm">
         <div className="flex flex-col md:flex-row gap-10">
           <div className="w-full md:w-1/2 relative md:ml-[100px]">
             <img
@@ -223,20 +223,20 @@ const ProductInfo = () => {
           </div>
 
           <div className="w-full md:w-1/2">
-            <h1 className="text-3xl font-indif mb-4">{product.name}</h1>
+            <h1 className="text-3xl font-corm mb-4">{product.name}</h1>
             <p className="text-xl font-serif text-gray-400 mb-4">
               Price: ₹{product.price}
             </p>
             <div className="h-[1px] md:w-3/4 bg-slate-400"></div>
 
             <div>
-              <h2 className="font-gara text-2xl text-gray-400 mb-2 mt-2">
+              <h2 className="font-juli text-2xl text-gray-400 mb-2 mt-2">
                 Size
               </h2>
               {["XS", "S", "M", "L", "XL", "XXL"].map((size) => (
                 <button
                   key={size}
-                  className={`px-4 py-2 border-[1px] font-gara rounded-md border-black ml-4 ${
+                  className={`px-4 py-2 border-[1px] font-juli rounded-md border-black ml-4 ${
                     selectedSize === size
                       ? "bg-black text-white"
                       : "bg-white text-black"
@@ -249,19 +249,19 @@ const ProductInfo = () => {
               <div className="mt-4">
                 <Link
                   to="/size"
-                  className="font-gara text-xl hover:underline text-blue-700"
+                  className="font-juli text-xl hover:underline text-blue-700"
                 >
                   Size Chart
                 </Link>
               </div>
             </div>
 
-            <p className="text-gray-700 mb-4 mt-2 text-xl font-gara">
+            <p className="text-gray-700 mb-4 mt-2 text-xl font-juli">
               {isCollectionProduct
                 ? `Collection: ${collectionName}`
                 : `Category: ${categoryName}`}
             </p>
-            <p className="text-gray-600 mb-6 font-gara">
+            <p className="text-gray-600 mb-6 font-juli">
               {product.description}
             </p>
 
@@ -272,7 +272,7 @@ const ProductInfo = () => {
               >
                 -
               </button>
-              <span className="px-4 py-2 border-1 rounded-sm ml-4 border-black font-gara">
+              <span className="px-4 py-2 border-1 rounded-sm ml-4 border-black font-juli">
                 {quantity}
               </span>
               <button
@@ -285,7 +285,7 @@ const ProductInfo = () => {
 
             <button
               onClick={handleAddToCart}
-              className="bg-white text-[#4c4c4b] border-[1px] w-3/4 border-black py-3 px-6 rounded-lg hover:bg-[#4c4c4b] hover:text-white transition duration-300 mt-4 font-gara"
+              className="bg-white text-[#4c4c4b] border-[1px] w-3/4 border-black py-3 px-6 rounded-lg hover:bg-[#4c4c4b] hover:text-white transition duration-300 mt-4 font-juli"
             >
               Add to Cart
             </button>

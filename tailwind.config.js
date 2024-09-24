@@ -4,9 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // corm: ["Cormorant", "serif"],
+        corm: ["Cormorant", "serif"],
         gara: ["Garamond", "serif"],
-        indif: ["Teachers", "sans-serif"],
+        juli: ["Julius Sans One", "sans-serif"],
+        // indif: ["Teachers", "sans-serif"],
       },
     },
   },

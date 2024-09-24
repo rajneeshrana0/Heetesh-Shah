@@ -6,15 +6,15 @@ import Footer from "../components/Footer";
 const About = () => {
   return (
     <>
-      <div className="flex flex-col justify-center items-center mt-24 font-indif ">
+      <div className="flex flex-col justify-center items-center mt-24 font-corm ">
         <h1 className="uppercase font-extrabold text-2xl">Founder</h1>
-        <h2 className="mt-5 text-md font-bold font-gara">Dev And Viv</h2>
+        <h2 className="mt-5 text-md font-bold font-juli">Dev And Viv</h2>
         <img src={logo} alt="" className="w-72 h-auto mt-10" />{" "}
         {/* Adjust width and height */}
         <h2 className="mt-10 text-xl font-bold">Founder's Note</h2>
       </div>
 
-      <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 mt-5  mx-auto flex flex-col items-start font-gara font-semibold">
+      <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 mt-5  mx-auto flex flex-col items-start font-juli font-semibold">
         <p className="mt-5">
           The logo of our brand is a Khanda Sword which represents Hukam meaning
           the divine will or Shakti. Chandi Di Vaar (The Ballad of Chandi) is a
@@ -34,10 +34,10 @@ const About = () => {
         </p>
       </div>
 
-      <h2 className="text-center text-xl font-indif font-bold mt-10">
+      <h2 className="text-center text-xl font-corm font-bold mt-10">
         About the Designer
       </h2>
-      <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 mt-5 mx-auto flex flex-col items-start font-gara font-semibold">
+      <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 mt-5 mx-auto flex flex-col items-start font-juli font-semibold">
         <p className="mt-5">
           The logo of our brand is a Khanda Sword which represents Hukam meaning
           the divine will or Shakti. Chandi Di Vaar (The Ballad of Chandi) is a
@@ -60,7 +60,7 @@ const About = () => {
           {/* Icon 1 with Text */}
           <div className="flex flex-col items-center">
             <FaTruck className="text-3xl text-gray-800" /> {/* Shipping Icon */}
-            <p className="mt-2 text-gray-700 font-indif font-bold text-xl">
+            <p className="mt-2 text-gray-700 font-corm font-bold text-xl">
               Free Shipping
             </p>
           </div>
@@ -68,7 +68,7 @@ const About = () => {
           <div className="flex flex-col items-center">
             <FaGlobe className="text-3xl text-gray-800" />{" "}
             {/* Worldwide Delivery Icon */}
-            <p className="mt-2 text-gray-700 font-indif font-bold text-xl">
+            <p className="mt-2 text-gray-700 font-corm font-bold text-xl">
               Worldwide Delivery
             </p>
           </div>

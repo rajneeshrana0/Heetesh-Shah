@@ -52,7 +52,7 @@ const Collection = () => {
     <div className="w-full flex flex-col items-center justify-center py-10 mt-12">
       {/* Text Section */}
       <div className="text-center mb-6">
-        <h2 className="mb-2 text-[20px] sm:text-[25px] font-indif font-semibold">
+        <h2 className="mb-2 text-[20px] sm:text-[25px] font-corm font-semibold">
           Explore
         </h2>
         <p className="text-[16px] sm:text-[20px] font-gara font-semibold mt-5 text-gray-600">
@@ -68,7 +68,7 @@ const Collection = () => {
         >
           &lt;
         </button>
-        <h1 className="text-[20px] sm:text-[25px] font-indif font-semibold">
+        <h1 className="text-[20px] sm:text-[25px] font-corm font-semibold">
           Collection
         </h1>
         <button
@@ -103,7 +103,7 @@ const Collection = () => {
                   className="w-full h-[300px] sm:h-[400px] lg:h-[600px] object-cover cursor-pointer"
                 />
                 <div className="text-center mt-2">
-                  <h2 className="text-lg sm:text-2xl font-bold font-indif cursor-pointer">
+                  <h2 className="text-lg sm:text-2xl font-bold font-corm cursor-pointer">
                     {collection.name}
                   </h2>
                   <p className="text-gray-500 font-gara font-semibold">

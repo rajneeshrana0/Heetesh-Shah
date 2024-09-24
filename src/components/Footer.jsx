@@ -12,10 +12,10 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-sm sm:text-base">
         {/* Customer Care Section */}
         <div className="text-left">
-          <h4 className="font-indif font-bold text-lg sm:text-2xl">
+          <h4 className="font-corm font-bold text-lg sm:text-2xl">
             CUSTOMER CARE
           </h4>
-          <p className="mt-2 font-gara font-medium text-base sm:text-xl">
+          <p className="mt-2 font-juli font-medium text-base sm:text-xl">
             Our online customer care team is available Monday through Saturday,
             10AM – 6PM IST. We are closed on weekends and national holidays.
             Please contact us, we would be happy to assist you.
@@ -24,7 +24,7 @@ const Footer = () => {
             <FaPhone className="mt-1" />{" "}
             <a
               href="tel:+918700033744"
-              className="text-gray-700 font-indif font-bold text-base sm:text-lg"
+              className="text-gray-700 font-corm font-bold text-base sm:text-lg"
             >
               +91 899-9999-999
             </a>
@@ -33,7 +33,7 @@ const Footer = () => {
             <FaEnvelope />{" "}
             <a
               href="mailto:info@xyz.com"
-              className="text-gray-700 font-indif font-bold text-base sm:text-lg"
+              className="text-gray-700 font-corm font-bold text-base sm:text-lg"
             >
               info@xyz.com
             </a>
@@ -42,14 +42,14 @@ const Footer = () => {
 
         {/* Quick Links Section */}
         <div className="text-left">
-          <h4 className="font-indif font-bold text-lg sm:text-2xl">
+          <h4 className="font-corm font-bold text-lg sm:text-2xl">
             QUICK LINKS
           </h4>
           <ul className="mt-2 space-y-2">
             <li>
               <a
                 href="/about-us"
-                className="text-gray-700 hover:underline font-gara font-semibold"
+                className="text-gray-700 hover:underline font-juli font-semibold"
               >
                 About Us
               </a>
@@ -57,7 +57,7 @@ const Footer = () => {
             <li>
               <a
                 href="/shipping-policy"
-                className="text-gray-700 hover:underline font-gara font-semibold"
+                className="text-gray-700 hover:underline font-juli font-semibold"
               >
                 Shipping Policy
               </a>
@@ -65,7 +65,7 @@ const Footer = () => {
             <li>
               <a
                 href="/cancellation-returns"
-                className="text-gray-700 hover:underline font-gara font-semibold"
+                className="text-gray-700 hover:underline font-juli font-semibold"
               >
                 Cancellation & Returns
               </a>
@@ -73,7 +73,7 @@ const Footer = () => {
             <li>
               <a
                 href="/terms-conditions"
-                className="text-gray-700 hover:underline font-gara font-semibold"
+                className="text-gray-700 hover:underline font-juli font-semibold"
               >
                 Terms & Conditions
               </a>
@@ -81,7 +81,7 @@ const Footer = () => {
             <li>
               <a
                 href="/privacy-policy"
-                className="text-gray-700 hover:underline font-gara font-semibold"
+                className="text-gray-700 hover:underline font-juli font-semibold"
               >
                 Privacy Policy
               </a>
@@ -91,19 +91,19 @@ const Footer = () => {
 
         {/* Newsletter Section */}
         <div className="text-left">
-          <h4 className="font-indif font-bold text-lg sm:text-2xl">
+          <h4 className="font-corm font-bold text-lg sm:text-2xl">
             NEWSLETTER
           </h4>
-          <p className="mt-2 font-gara font-semibold">
+          <p className="mt-2 font-juli font-semibold">
             Sign up for exclusive offers, original stories, events and more.
           </p>
           <form className="mt-4">
             <input
               type="email"
               placeholder="Enter email"
-              className="px-4 py-2 border font-indif font-semibold border-gray-300 w-full mb-2"
+              className="px-4 py-2 border font-corm font-semibold border-gray-300 w-full mb-2"
             />
-            <button className="bg-gray-800 text-white px-4 py-2 w-full font-indif font-semibold">
+            <button className="bg-gray-800 text-white px-4 py-2 w-full font-corm font-semibold">
               Sign up
             </button>
           </form>
@@ -111,7 +111,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="container mx-auto mt-8 text-center text-sm sm:text-lg border-t pt-4 text-gray-500 font-indif font-semibold">
+      <div className="container mx-auto mt-8 text-center text-sm sm:text-lg border-t pt-4 text-gray-500 font-corm font-semibold">
         <p>© 2024 xyz.com. Managed by Growify Digital</p>
         <ul className="flex flex-wrap justify-center space-x-2 sm:space-x-4 mt-4">
           <li>

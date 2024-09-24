@@ -77,8 +77,8 @@ const CategoryProducts = () => {
   // Render loading, error, or product grid
   return (
     <>
-      <div className="mt-24 font-indif font-semibold">
-        <h2 className="text-xl font-bold ml-7 font-indif">
+      <div className="mt-24 font-corm font-semibold">
+        <h2 className="text-xl font-bold ml-7 font-corm">
           Category: {categoryName ? `${categoryName} ` : "Category Products"}
         </h2>
         {loading && <p>Loading products...</p>}
@@ -146,7 +146,7 @@ const CategoryProducts = () => {
               </div>
 
               {/* Product Info */}
-              <h3 className="text-lg font-bold font-indif mt-4">
+              <h3 className="text-lg font-bold font-corm mt-4">
                 {product.name}
               </h3>
               <p className="text-sm text-gray-600 font-gara">

@@ -5,9 +5,9 @@ import Footer from "../components/Footer";
 const Size = () => {
   return (
     <>
-      <div className="p-4 mt-24 font-indif">
+      <div className="p-4 mt-24 font-corm">
         <h2 className="text-2xl font-bold mb-4">Size Chart</h2>
-        <p className="mb-4 font-gara">
+        <p className="mb-4 font-juli">
           To determine your perfect fit, we recommend measuring your bust,
           waist, and hips.
         </p>
@@ -16,7 +16,7 @@ const Size = () => {
         <div className="overflow-x-auto">
           <table className="table-auto w-full border-collapse border border-gray-300 mb-8">
             <thead>
-              <tr className="bg-gray-100 font-gara">
+              <tr className="bg-gray-100 font-juli">
                 <th className="border border-gray-300 px-2 py-1">DBV Size</th>
                 <th className="border border-gray-300 px-2 py-1">US Size</th>
                 <th className="border border-gray-300 px-2 py-1">UK Size</th>
@@ -138,7 +138,7 @@ const Size = () => {
                   legCM: "107",
                 },
               ].map((item, index) => (
-                <tr key={index} className="text-center font-gara">
+                <tr key={index} className="text-center font-juli">
                   <td className="border border-gray-300 px-2 py-1">
                     {item.size}
                   </td>
@@ -181,7 +181,7 @@ const Size = () => {
           </table>
         </div>
 
-        <p className="mb-4 font-gara">
+        <p className="mb-4 font-juli">
           <strong>Note:</strong> These are standard measurements. Though the
           look and feel of each product are different, each silhouette will have
           unique measurements.
@@ -197,7 +197,7 @@ const Size = () => {
             <h3 className="text-xl font-bold mb-2">
               How to Take Your Measurements
             </h3>
-            <ul className="list-decimal list-inside font-gara space-y-2">
+            <ul className="list-decimal list-inside font-juli space-y-2">
               <li>
                 <strong>Chest Circumference:</strong> The chest circumference is
                 measured at the widest part of your chest and shoulder blades

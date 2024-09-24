@@ -37,10 +37,10 @@ const Discover = () => {
     <>
       {/* Center the heading and paragraph */}
       <div className="mt-[80px] text-center bg-gray-100 flex flex-col items-center">
-        <h1 className="uppercase text-[25px] font-indif font-semibold">
+        <h1 className="uppercase text-[25px] font-corm font-semibold">
           Discover
         </h1>
-        <p className="text-[20px] text-gray-800 font-gara font-semibold mt-3">
+        <p className="text-[20px] text-gray-800 font-juli font-semibold mt-3">
           The eternal through its creation.
         </p>
       </div>
@@ -58,10 +58,10 @@ const Discover = () => {
               />
               {/* Text Overlay */}
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start p-6">
-                <h2 className="text-white text-3xl font-semibold font-indif cursor-pointer">
+                <h2 className="text-white text-3xl font-semibold font-corm cursor-pointer">
                   {category.name.toUpperCase()}
                 </h2>
-                <button className="mt-4 text-white border-b-2 border-white font-gara">
+                <button className="mt-4 text-white border-b-2 border-white font-juli">
                   Shop Now
                 </button>
               </div>
@@ -75,14 +75,14 @@ const Discover = () => {
         {!showAll ? (
           <button
             onClick={() => setShowAll(true)}
-            className="px-4 py-2 bg-gray-800 text-white rounded font-gara font-semibold"
+            className="px-4 py-2 bg-gray-800 text-white rounded font-juli font-semibold"
           >
             View All
           </button>
         ) : (
           <button
             onClick={() => setShowAll(false)}
-            className="px-4 py-2 bg-gray-800 text-white rounded font-gara font-semibold"
+            className="px-4 py-2 bg-gray-800 text-white rounded font-juli font-semibold"
           >
             View Less
           </button>
