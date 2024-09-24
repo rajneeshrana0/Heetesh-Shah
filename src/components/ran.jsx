@@ -13,8 +13,8 @@ const Navbar = () => {
     try {
       // Fetch from first API
       const [response1, response2] = await Promise.all([
-        fetch(`https://bcom-backend.onrender.com/api/products/products?name=${query}`),
-        fetch(`https://bcom-backend.onrender.com/api/collection-products/products?name=${query}`)
+        fetch(`https://heetesh-shah.onrender.com/api/products/products?name=${query}`),
+        fetch(`https://heetesh-shah.onrender.com/api/collection-products/products?name=${query}`)
       ]);
 
       const data1 = await response1.json();

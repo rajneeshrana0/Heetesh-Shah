@@ -62,7 +62,7 @@ const Navbar = () => {
     const fetchCategories = async () => {
       try {
         const response = await fetch(
-          "https://bcom-backend.onrender.com/api/categories"
+          "https://heetesh-shah.onrender.com/api/categories"
         );
         const data = await response.json();
         setCategories(data);
@@ -74,7 +74,7 @@ const Navbar = () => {
     const fetchCollections = async () => {
       try {
         const response = await fetch(
-          "https://bcom-backend.onrender.com/api/collections"
+          "https://heetesh-shah.onrender.com/api/collections"
         );
         const data = await response.json();
         setCollections(data);

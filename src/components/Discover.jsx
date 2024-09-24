@@ -19,7 +19,7 @@ const Discover = () => {
     const fetchCategories = async () => {
       try {
         const response = await axios.get(
-          "https://bcom-backend.onrender.com/api/categories"
+          "https://heetesh-shah.onrender.com/api/categories"
         );
         setCategories(response.data);
       } catch (error) {

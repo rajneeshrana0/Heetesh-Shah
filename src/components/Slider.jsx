@@ -10,7 +10,7 @@ const Slider = () => {
     const fetchSlides = async () => {
       try {
         const response = await axios.get(
-          "https://bcom-backend.onrender.com/api/media/all"
+          "https://heetesh-shah.onrender.com/api/media/all"
         );
         setSlides(response.data);
       } catch (error) {

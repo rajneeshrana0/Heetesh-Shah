@@ -18,7 +18,7 @@ const ProductInfo = () => {
     const fetchProduct = async () => {
       try {
         const productResponse = await fetch(
-          `https://bcom-backend.onrender.com/api/products/${id}/products/${id}`
+          `https://heetesh-shah.onrender.com/api/products/${id}/products/${id}`
         );
         if (productResponse.ok) {
           const productData = await productResponse.json();
@@ -31,7 +31,7 @@ const ProductInfo = () => {
           }
         } else {
           const collectionProductResponse = await fetch(
-            `https://bcom-backend.onrender.com/api/collection-products/${collectionId}/products/${id}`
+            `https://heetesh-shah.onrender.com/api/collection-products/${collectionId}/products/${id}`
           );
           if (collectionProductResponse.ok) {
             const collectionProductData =
@@ -55,7 +55,7 @@ const ProductInfo = () => {
     const fetchCategoryName = async (categoryId) => {
       try {
         const categoryResponse = await fetch(
-          `https://bcom-backend.onrender.com/api/categories/${categoryId}`
+          `https://heetesh-shah.onrender.com/api/categories/${categoryId}`
         );
         if (categoryResponse.ok) {
           const categoryData = await categoryResponse.json();
@@ -71,7 +71,7 @@ const ProductInfo = () => {
     const fetchCollectionName = async (collectionId) => {
       try {
         const collectionResponse = await fetch(
-          `https://bcom-backend.onrender.com/api/collections/${collectionId}`
+          `https://heetesh-shah.onrender.com/api/collections/${collectionId}`
         );
         if (collectionResponse.ok) {
           const collectionData = await collectionResponse.json();
@@ -88,7 +88,7 @@ const ProductInfo = () => {
     const fetchMoreProductsByCategory = async (categoryId) => {
       try {
         const response = await fetch(
-          `https://bcom-backend.onrender.com/api/categories/${categoryId}/products`
+          `https://heetesh-shah.onrender.com/api/categories/${categoryId}/products`
         );
         if (response.ok) {
           const data = await response.json();
@@ -103,7 +103,7 @@ const ProductInfo = () => {
     const fetchMoreProductsByCollection = async (collectionId) => {
       try {
         const response = await fetch(
-          `https://bcom-backend.onrender.com/api/collections/${collectionId}/products`
+          `https://heetesh-shah.onrender.com/api/collections/${collectionId}/products`
         );
         if (response.ok) {
           const data = await response.json();

@@ -17,7 +17,7 @@ const CreateCollection = () => {
   const fetchCollections = async () => {
     try {
       const response = await axios.get(
-        "https://bcom-backend.onrender.com/api/collections"
+        "https://heetesh-shah.onrender.com/api/collections"
       );
       setCollections(response.data);
     } catch (error) {
@@ -33,7 +33,7 @@ const CreateCollection = () => {
       // Update collection
       try {
         await axios.put(
-          `https://bcom-backend.onrender.com/api/collections/${collectionId}`,
+          `https://heetesh-shah.onrender.com/api/collections/${collectionId}`,
           { name }
         );
         toast.success("Collection updated successfully!");
@@ -46,7 +46,7 @@ const CreateCollection = () => {
     } else {
       // Create collection
       try {
-        await axios.post("https://bcom-backend.onrender.com/api/collections", {
+        await axios.post("https://heetesh-shah.onrender.com/api/collections", {
           name,
         });
         toast.success("Collection created successfully!");
@@ -70,7 +70,7 @@ const CreateCollection = () => {
     if (window.confirm("Are you sure you want to delete this collection?")) {
       try {
         await axios.delete(
-          `https://bcom-backend.onrender.com/api/collections/${id}`
+          `https://heetesh-shah.onrender.com/api/collections/${id}`
         );
         toast.success("Collection deleted successfully!");
         fetchCollections(); // Refresh the list after deleting

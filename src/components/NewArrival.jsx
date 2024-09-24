@@ -17,9 +17,9 @@ const NewArrival = () => {
       try {
         const [productsResponse, collectionProductsResponse] =
           await Promise.all([
-            fetch("https://bcom-backend.onrender.com/api/products/products"),
+            fetch("https://heetesh-shah.onrender.com/api/products/products"),
             fetch(
-              "https://bcom-backend.onrender.com/api/collection-products/products"
+              "https://heetesh-shah.onrender.com/api/collection-products/products"
             ),
           ]);
 

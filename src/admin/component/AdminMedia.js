@@ -15,7 +15,7 @@ const AdminMedia = () => {
   // Function to fetch media files from backend
   const fetchMediaFiles = async () => {
     try {
-      const response = await axios.get('https://bcom-backend.onrender.com/api/media/all');
+      const response = await axios.get('https://heetesh-shah.onrender.com/api/media/all');
       setMediaFiles(response.data);
     } catch (error) {
       console.error('Error fetching media files:', error);
@@ -33,7 +33,7 @@ const AdminMedia = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post('https://bcom-backend.onrender.com/api/media/upload', formData, {
+      const response = await axios.post('https://heetesh-shah.onrender.com/api/media/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -49,7 +49,7 @@ const AdminMedia = () => {
   // Function to handle file delete
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://bcom-backend.onrender.com/api/media/${id}`);
+      await axios.delete(`https://heetesh-shah.onrender.com/api/media/${id}`);
       fetchMediaFiles(); // Refresh the media files after deletion
     } catch (error) {
       console.error('Error deleting media:', error);

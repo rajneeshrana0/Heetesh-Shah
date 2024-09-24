@@ -23,7 +23,7 @@ const CategoryProducts = () => {
       try {
         // Fetch Category Details
         const categoryResponse = await fetch(
-          `https://bcom-backend.onrender.com/api/categories/${id}`
+          `https://heetesh-shah.onrender.com/api/categories/${id}`
         );
         if (!categoryResponse.ok) {
           throw new Error("Failed to fetch category details");
@@ -33,7 +33,7 @@ const CategoryProducts = () => {
 
         // Fetch Products for the Category
         const productsResponse = await fetch(
-          `https://bcom-backend.onrender.com/api/products/${id}/products`
+          `https://heetesh-shah.onrender.com/api/products/${id}/products`
         );
         if (!productsResponse.ok) {
           throw new Error("Failed to fetch products");

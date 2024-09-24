@@ -8,7 +8,7 @@ const UserOrder = () => {
   useEffect(() => {
     const fetchOrder = async () => {
       const response = await fetch(
-        `https://bcom-backend.onrender.com/api/orders/${id}`
+        `https://heetesh-shah.onrender.com/api/orders/${id}`
       );
       const data = await response.json();
       setOrder(data);

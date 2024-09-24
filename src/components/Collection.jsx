@@ -26,7 +26,7 @@ const Collection = () => {
     const fetchCollections = async () => {
       try {
         const response = await axios.get(
-          "https://bcom-backend.onrender.com/api/collections"
+          "https://heetesh-shah.onrender.com/api/collections"
         );
         setCollections(response.data); // Assuming the API returns an array of collections
       } catch (error) {

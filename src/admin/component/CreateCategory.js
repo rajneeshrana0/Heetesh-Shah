@@ -17,7 +17,7 @@ const CreateCategory = () => {
   const fetchCategories = async () => {
     try {
       const response = await axios.get(
-        "https://bcom-backend.onrender.com/api/categories"
+        "https://heetesh-shah.onrender.com/api/categories"
       );
       setCategories(response.data);
     } catch (error) {
@@ -33,7 +33,7 @@ const CreateCategory = () => {
       // Update category
       try {
         await axios.put(
-          `https://bcom-backend.onrender.com/api/categories/${categoryId}`,
+          `https://heetesh-shah.onrender.com/api/categories/${categoryId}`,
           { name }
         );
         toast.success("Category updated successfully!");
@@ -46,7 +46,7 @@ const CreateCategory = () => {
     } else {
       // Create category
       try {
-        await axios.post("https://bcom-backend.onrender.com/api/categories", {
+        await axios.post("https://heetesh-shah.onrender.com/api/categories", {
           name,
         });
         toast.success("Category created successfully!");
@@ -70,7 +70,7 @@ const CreateCategory = () => {
     if (window.confirm("Are you sure you want to delete this category?")) {
       try {
         await axios.delete(
-          `https://bcom-backend.onrender.com/api/categories/${id}`
+          `https://heetesh-shah.onrender.com/api/categories/${id}`
         );
         toast.success("Category deleted successfully!");
         fetchCategories(); // Refresh the list after deleting

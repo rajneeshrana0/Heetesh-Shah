@@ -27,7 +27,7 @@ const VideoUpload = () => {
     formData.append('video', videoFile);
 
     try {
-      const response = await axios.post('https://bcom-backend.onrender.com/api/video', formData, {
+      const response = await axios.post('https://heetesh-shah.onrender.com/api/video', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -57,7 +57,7 @@ const VideoUpload = () => {
     formData.append('video', videoFile);
 
     try {
-      const response = await axios.put(`https://bcom-backend.onrender.com/api/video/${videoId}`, formData, {
+      const response = await axios.put(`https://heetesh-shah.onrender.com/api/video/${videoId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -81,7 +81,7 @@ const VideoUpload = () => {
   // Fetch all videos from the API
   const fetchAllVideos = async () => {
     try {
-      const response = await axios.get('https://bcom-backend.onrender.com/api/video');
+      const response = await axios.get('https://heetesh-shah.onrender.com/api/video');
       setVideos(response.data || []); // Ensure the response is always an array
     } catch (error) {
       toast.error('Failed to fetch videos');

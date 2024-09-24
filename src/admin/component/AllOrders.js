@@ -9,7 +9,7 @@ const AdminOrders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       const response = await fetch(
-        "https://bcom-backend.onrender.com/api/orders"
+        "https://heetesh-shah.onrender.com/api/orders"
       );
       const data = await response.json();
       setOrders(data);

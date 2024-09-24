@@ -104,7 +104,7 @@ const Cart = () => {
     try {
       // Step 1: Create an order for payment on the backend
       const paymentResponse = await fetch(
-        "https://bcom-backend.onrender.com/api/payments",
+        "https://heetesh-shah.onrender.com/api/payments",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -137,7 +137,7 @@ const Cart = () => {
 
             try {
               const verifyResponse = await fetch(
-                "https://bcom-backend.onrender.com/api/payments/verify",
+                "https://heetesh-shah.onrender.com/api/payments/verify",
                 {
                   method: "POST",
                   headers: { "Content-Type": "application/json" },
@@ -149,7 +149,7 @@ const Cart = () => {
 
               if (verifyResponse.ok) {
                 const orderResponse = await fetch(
-                  "https://bcom-backend.onrender.com/api/orders",
+                  "https://heetesh-shah.onrender.com/api/orders",
                   {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
