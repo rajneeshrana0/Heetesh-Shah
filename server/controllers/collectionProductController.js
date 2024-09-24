@@ -1,12 +1,14 @@
-const CollectionProduct = require('../models/CollectionProduct');
-const cloudinary = require('../config/cloudinaryConfig');
+const CollectionProduct = require("../models/CollectionProduct");
+const cloudinary = require("../config/cloudinaryConfig");
 
 // Create a new product under a specific collection
 exports.createCollectionProduct = async (req, res) => {
   try {
     const { name, size, price, description } = req.body;
-    const images = await Promise.all(req.files.map(file => cloudinary.uploader.upload(file.path)));
-    const imageUrls = images.map(image => image.secure_url);
+    const images = await Promise.all(
+      req.files.map((file) => cloudinary.uploader.upload(file.path))
+    );
+    const imageUrls = images.map((image) => image.secure_url);
 
     const product = new CollectionProduct({
       name,
@@ -14,7 +16,7 @@ exports.createCollectionProduct = async (req, res) => {
       price,
       description,
       images: imageUrls,
-      collection: req.params.collectionId
+      collection: req.params.collectionId,
     });
 
     await product.save();
@@ -27,9 +29,13 @@ exports.createCollectionProduct = async (req, res) => {
 // Get all products for a specific collection
 exports.getCollectionProducts = async (req, res) => {
   try {
-    const products = await CollectionProduct.find({ collection: req.params.collectionId });
+    const products = await CollectionProduct.find({
+      collection: req.params.collectionId,
+    });
     if (!products) {
-      return res.status(404).json({ message: 'No products found for this collection' });
+      return res
+        .status(404)
+        .json({ message: "No products found for this collection" });
     }
     res.status(200).json(products);
   } catch (error) {
@@ -41,11 +47,10 @@ exports.getCollectionProducts = async (req, res) => {
 exports.getAllCollectionProducts = async (req, res) => {
   try {
     // Fetch all products and populate the collection details
-    const products = await CollectionProduct.find()
-      .populate('collection'); // Assuming 'collection' field stores the collection ID
+    const products = await CollectionProduct.find().populate("collection"); // Assuming 'collection' field stores the collection ID
 
     if (!products || products.length === 0) {
-      return res.status(404).json({ message: 'No products found' });
+      return res.status(404).json({ message: "No products found" });
     }
 
     res.status(200).json(products);
@@ -54,13 +59,12 @@ exports.getAllCollectionProducts = async (req, res) => {
   }
 };
 
-
 // Get a specific product by ID
 exports.getCollectionProductById = async (req, res) => {
   try {
     const product = await CollectionProduct.findById(req.params.productId);
     if (!product) {
-      return res.status(404).json({ message: 'Product not found' });
+      return res.status(404).json({ message: "Product not found" });
     }
     res.status(200).json(product);
   } catch (error) {
@@ -75,7 +79,7 @@ exports.updateCollectionProduct = async (req, res) => {
     const product = await CollectionProduct.findById(req.params.productId);
 
     if (!product) {
-      return res.status(404).json({ message: 'Product not found' });
+      return res.status(404).json({ message: "Product not found" });
     }
 
     // Update the product fields
@@ -86,13 +90,15 @@ exports.updateCollectionProduct = async (req, res) => {
 
     // If new images are uploaded, replace the existing ones
     if (req.files && req.files.length > 0) {
-      const images = await Promise.all(req.files.map(file => cloudinary.uploader.upload(file.path)));
-      product.images = images.map(image => image.secure_url);
+      const images = await Promise.all(
+        req.files.map((file) => cloudinary.uploader.upload(file.path))
+      );
+      product.images = images.map((image) => image.secure_url);
     }
 
     await product.save();
     res.status(200).json({
-      message: 'Product updated successfully',
+      message: "Product updated successfully",
       product,
     });
   } catch (error) {
@@ -106,11 +112,11 @@ exports.deleteCollectionProduct = async (req, res) => {
     const product = await CollectionProduct.findById(req.params.productId);
 
     if (!product) {
-      return res.status(404).json({ message: 'Product not found' });
+      return res.status(404).json({ message: "Product not found" });
     }
 
-    await product.remove();
-    res.status(200).json({ message: 'Product deleted successfully' });
+    await CollectionProduct.findByIdAndDelete(req.params.productId);
+    res.status(200).json({ message: "Product deleted successfully" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

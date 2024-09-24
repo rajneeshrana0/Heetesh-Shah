@@ -1,6 +1,6 @@
-const Product = require('../models/Product');
-const Category = require('../models/Category');
-const cloudinary = require('../config/cloudinaryConfig');
+const Product = require("../models/Product");
+const Category = require("../models/Category");
+const cloudinary = require("../config/cloudinaryConfig");
 
 // Create a new product under a specific category
 exports.createProduct = async (req, res) => {
@@ -11,7 +11,7 @@ exports.createProduct = async (req, res) => {
     // Check if the category exists
     const category = await Category.findById(categoryId);
     if (!category) {
-      return res.status(404).json({ message: 'Category not found' });
+      return res.status(404).json({ message: "Category not found" });
     }
 
     // Cloudinary transformations for image compression
@@ -45,7 +45,7 @@ exports.createProduct = async (req, res) => {
     await product.save();
 
     res.status(201).json({
-      message: 'Product created successfully',
+      message: "Product created successfully",
       product,
     });
   } catch (error) {
@@ -61,7 +61,7 @@ exports.getProductsByCategory = async (req, res) => {
     // Check if the category exists
     const category = await Category.findById(categoryId);
     if (!category) {
-      return res.status(404).json({ message: 'Category not found' });
+      return res.status(404).json({ message: "Category not found" });
     }
 
     const products = await Product.find({ category: categoryId });
@@ -78,7 +78,7 @@ exports.getProductById = async (req, res) => {
 
     const product = await Product.findById(productId);
     if (!product) {
-      return res.status(404).json({ message: 'Product not found' });
+      return res.status(404).json({ message: "Product not found" });
     }
 
     res.status(200).json(product);
@@ -96,13 +96,13 @@ exports.updateProduct = async (req, res) => {
     // Check if the product exists
     const product = await Product.findById(productId);
     if (!product) {
-      return res.status(404).json({ message: 'Product not found' });
+      return res.status(404).json({ message: "Product not found" });
     }
 
     // Check if the category exists
     const category = await Category.findById(categoryId);
     if (!category) {
-      return res.status(404).json({ message: 'Category not found' });
+      return res.status(404).json({ message: "Category not found" });
     }
 
     // Update the product fields
@@ -124,7 +124,7 @@ exports.updateProduct = async (req, res) => {
     await product.save();
 
     res.status(200).json({
-      message: 'Product updated successfully',
+      message: "Product updated successfully",
       product,
     });
   } catch (error) {
@@ -140,13 +140,13 @@ exports.deleteProduct = async (req, res) => {
     // Check if the product exists
     const product = await Product.findById(productId);
     if (!product) {
-      return res.status(404).json({ message: 'Product not found' });
+      return res.status(404).json({ message: "Product not found" });
     }
 
     // Delete the product
-    await product.remove();
+    await Product.findByIdAndDelete(productId);
 
-    res.status(200).json({ message: 'Product deleted successfully' });
+    res.status(200).json({ message: "Product deleted successfully" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -156,9 +156,8 @@ exports.deleteProduct = async (req, res) => {
 exports.getAllProducts = async (req, res) => {
   try {
     // Fetch all products and populate the related category and collection details
-    const products = await Product.find()
-      .populate('category')        // Assuming 'category' field stores category ID
-      // .populate('collection');     // Assuming 'collection' field stores collection ID (if any)
+    const products = await Product.find().populate("category"); // Assuming 'category' field stores category ID
+    // .populate('collection');     // Assuming 'collection' field stores collection ID (if any)
 
     // Send response with all products and their full details
     res.status(200).json(products);

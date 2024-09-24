@@ -1,4 +1,4 @@
-const Collection = require('../models/Collection');
+const Collection = require("../models/Collection");
 
 // Create a new collection
 exports.createCollection = async (req, res) => {
@@ -26,7 +26,7 @@ exports.getCollectionById = async (req, res) => {
   try {
     const collection = await Collection.findById(req.params.collectionId);
     if (!collection) {
-      return res.status(404).json({ message: 'Collection not found' });
+      return res.status(404).json({ message: "Collection not found" });
     }
     res.status(200).json(collection);
   } catch (error) {
@@ -41,7 +41,7 @@ exports.updateCollection = async (req, res) => {
     const collection = await Collection.findById(req.params.collectionId);
 
     if (!collection) {
-      return res.status(404).json({ message: 'Collection not found' });
+      return res.status(404).json({ message: "Collection not found" });
     }
 
     // Update fields
@@ -49,7 +49,9 @@ exports.updateCollection = async (req, res) => {
     collection.description = description || collection.description;
 
     await collection.save();
-    res.status(200).json({ message: 'Collection updated successfully', collection });
+    res
+      .status(200)
+      .json({ message: "Collection updated successfully", collection });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -61,11 +63,11 @@ exports.deleteCollection = async (req, res) => {
     const collection = await Collection.findById(req.params.collectionId);
 
     if (!collection) {
-      return res.status(404).json({ message: 'Collection not found' });
+      return res.status(404).json({ message: "Collection not found" });
     }
 
-    await collection.remove();
-    res.status(200).json({ message: 'Collection deleted successfully' });
+    await Collection.findByIdAndDelete(req.params.collectionId);
+    res.status(200).json({ message: "Collection deleted successfully" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
