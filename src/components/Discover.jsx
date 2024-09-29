@@ -31,13 +31,13 @@ const Discover = () => {
   }, []);
 
   // Limit the number of categories shown to 4 if "View All" is not clicked
-  const displayedCategories = showAll ? categories : categories.slice(0, 4);
+  const displayedCategories = showAll ? categories : categories.slice(0, 1);
 
   return (
     <>
       {/* Center the heading and paragraph */}
       <div className="mt-[80px] text-center bg-gray-100 flex flex-col items-center">
-        <h1 className="uppercase text-[25px] font-corm font-semibold">
+        <h1 className="uppercase text-[25px] font-corm font-semibold mt-14">
           Discover
         </h1>
         <p className="text-[20px] text-gray-800 font-juli font-semibold mt-3">
@@ -46,7 +46,7 @@ const Discover = () => {
       </div>
 
       {/* Grid for the images */}
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full mx-auto bg-gray-100 gap-8 px-8">
+      <div className="grid grid-cols-1 md:grid-cols-1 w-full mx-auto bg-gray-100 gap-8 px-8">
         {displayedCategories.map((category, index) => (
           <Link to={`/category/${category._id}`} key={category._id}>
             <div className="relative group mt-[40px] cursor-pointer">
@@ -54,14 +54,14 @@ const Discover = () => {
               <img
                 src={images[index % images.length]} // Cycle through the imported images
                 alt={category.name}
-                className="w-full h-[500px] object-cover"
+                className="w-screen h-screen object-cover text-center"
               />
               {/* Text Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start p-6">
-                <h2 className="text-white text-3xl font-semibold font-corm cursor-pointer">
+              <div className="absolute inset-0 flex flex-col justify-center items-center mt-96 p-6">
+                <h2 className="text-white text-center text-3xl font-semibold font-corm cursor-pointer">
                   {category.name.toUpperCase()}
                 </h2>
-                <button className="mt-4 text-white border-b-2 border-white font-juli">
+                <button className="mt-4 text-center text-white border-b-2 border-white font-juli">
                   Shop Now
                 </button>
               </div>

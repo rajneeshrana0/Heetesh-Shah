@@ -50,7 +50,7 @@ const Slider = () => {
   }, [currentIndex]);
 
   return (
-    <div className="w-full max-h-[400px] sm:max-h-[500px] md:max-h-[600px] lg:max-h-[80vh] relative overflow-hidden">
+    <div className="w-screen h-screen relative overflow-hidden">
       <div
         className="w-full h-full flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -71,8 +71,7 @@ const Slider = () => {
                 autoPlay
                 muted
                 loop
-                controls
-                className={`w-full h-full object-contain transition-all duration-700 ${
+                className={`w-screen h-screen object-contain transition-all duration-700 ${
                   isTransitioning ? "scale-110 blur-sm" : "scale-100 blur-0"
                 }`}
               />

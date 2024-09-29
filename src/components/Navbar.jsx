@@ -10,6 +10,7 @@ import { Link, useLocation } from "react-router-dom"; // Import useLocation
 import Slider from "./Slider"; // Import Slider component
 import logo from "../assets/HS&DV/heeteshWhite.png";
 import hoverLogo from "../assets/HS&DV/Heetash.zip - 3.png";
+import VideoHome from "./VideoHome";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -128,7 +129,8 @@ const Navbar = () => {
         {/* Only render the Slider on the Home page (path === "/") */}
         {location.pathname === "/" ? (
           <div className="">
-            <Slider />
+            {/* <Slider /> */}
+            <VideoHome />
           </div>
         ) : (
           <div className="h-0"></div> // Add a class with no height on non-home pages to avoid empty space
@@ -260,6 +262,15 @@ const Navbar = () => {
                       Contact
                     </Link>
                   </li>
+                  <li className="hover:bg-gray-100 px-3 py-2 font-indif uppercase">
+                    <Link
+                      to="https://ecom-nu-five.vercel.app/"
+                      onClick={toggleMenu}
+                      target="_blank"
+                    >
+                      Dev and Viv
+                    </Link>
+                  </li>
                 </ul>
 
                 <div className="flex-grow text-center">
@@ -273,7 +284,7 @@ const Navbar = () => {
                           : hoverLogo
                       }
                       alt="Logo"
-                      className="h-[200px] w-[200px] lg:text-center lg:ml-80  transition-opacity duration-300"
+                      className="h-[200px] w-[200px] lg:ml-40 transition-opacity duration-300"
                     />
                   </Link>
                 </div>
@@ -443,6 +454,15 @@ const Navbar = () => {
                 <li className="hover:bg-gray-100 px-3 py-2 font-corm">
                   <Link to="/contact" onClick={toggleMenu}>
                     Contact
+                  </Link>
+                </li>
+                <li className="hover:bg-gray-100 px-3 py-2 font-indif uppercase">
+                  <Link
+                    to="https://ecom-nu-five.vercel.app/"
+                    onClick={toggleMenu}
+                    target="_blank"
+                  >
+                    Heetesh Shah
                   </Link>
                 </li>
               </ul>

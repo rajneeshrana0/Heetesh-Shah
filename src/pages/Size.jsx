@@ -194,31 +194,24 @@ const Size = () => {
             className="w-full md:w-1/2 mb-4 md:mb-0"
           />
           <div className="border-t border-gray-300 pt-4 w-full md:w-1/2 text-xl">
-            <h3 className="text-xl font-bold mb-2">
-              How to Take Your Measurements
-            </h3>
+            <h3 className="text-xl font-bold mb-2">Necessary Measurements:</h3>
             <ul className="list-decimal list-inside font-juli space-y-2">
               <li>
-                <strong>Chest Circumference:</strong> The chest circumference is
-                measured at the widest part of your chest and shoulder blades
-                with your arms hanging down at your sides.
+                <strong> Basic Necessary Measurements:</strong> bust, waist,
+                hips, hollow to floor(bare), height(bare), and height of high
+                heels.
               </li>
               <li>
-                <strong>Waist Circumference:</strong> The waist circumference is
-                measured at the narrowest part of your waist. The measuring tape
-                should be snug but not too tight.
+                <strong>Additional Measurements for Plus-Sized People:</strong>{" "}
+                belly (widest waist), butt, and hollow to belly.
               </li>
               <li>
-                <strong>Hip Circumference:</strong> The hip circumference is
-                measured at the widest part of your hips.
+                <strong>Sleeve and Partially Sleeveless Measurements:</strong>{" "}
+                arm length, armhole, biceps, and cuff.
               </li>
               <li>
-                <strong>Leg Length:</strong> The leg length is measured from the
-                top of your thigh to the ankle.
-              </li>
-              <li>
-                <strong>Length:</strong> The length is measured from the top of
-                your shoulder seam to the hem.
+                <strong>Hollow to Hem:</strong> mini length, above-knee length,
+                knee length, tea length, ankle length, and floor length.
               </li>
             </ul>
           </div>

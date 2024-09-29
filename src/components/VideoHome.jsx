@@ -1,29 +1,32 @@
-import React, { useEffect, useState } from 'react';
-import { FaTruck, FaGlobe } from 'react-icons/fa'; // Importing react icons
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import { FaTruck, FaGlobe } from "react-icons/fa"; // Importing react icons
+import axios from "axios";
 
 const VideoHome = () => {
-  const [videoUrl, setVideoUrl] = useState('');
+  const [videoUrl, setVideoUrl] = useState("");
 
   // Fetch video from the API
   useEffect(() => {
     const fetchVideo = async () => {
       try {
-        const response = await axios.get('https://heetesh-shah.onrender.com/api/video');
+        const response = await axios.get(
+          "https://heetesh-shah.onrender.com/api/video"
+        );
+        console.log(response.data); // Log the response to check its structure
         if (response.data && response.data.length > 0) {
           setVideoUrl(response.data[0].videoUrl); // Assuming the first video is used
         }
       } catch (error) {
-        console.error('Error fetching video:', error);
+        console.error("Error fetching video:", error);
       }
     };
     fetchVideo();
   }, []);
 
   return (
-    <div className="relative top-[100px]">
+    <div className="relative">
       {/* Video Section */}
-      <div className="w-full h-96 overflow-hidden bg-black">
+      <div className="w-screen h-screen overflow-hidden bg-black">
         {videoUrl ? (
           <video
             className="object-cover w-full h-full opacity-70 transition-all duration-1000 ease-in-out"
@@ -37,20 +40,6 @@ const VideoHome = () => {
         ) : (
           <div className="text-white text-center">Loading Video...</div> // Loading state
         )}
-      </div>
-
-      {/* Icons and Text Section */}
-      <div className="flex justify-between  mt-[30px] max-w-md mx-auto">
-        {/* Icon 1 with Text */}
-        <div className="flex  flex-col items-center">
-          <FaTruck className="text-3xl text-gray-800" /> {/* Shipping Icon */}
-          <p className="mt-2 text-gray-700 font-corm font-bold text-xl">Free Shipping</p>
-        </div>
-        {/* Icon 2 with Text */}
-        <div className="flex flex-col items-center">
-          <FaGlobe className="text-3xl text-gray-800" /> {/* Worldwide Delivery Icon */}
-          <p className="mt-2 text-gray-700 font-corm font-bold text-xl">Worldwide Delivery</p>
-        </div>
       </div>
     </div>
   );

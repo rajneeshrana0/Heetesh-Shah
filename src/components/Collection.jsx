@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import logo from "../assets/HS&DV/Heetash.zip - 1.png";
 
 // Import images from src/assets
 import redNetLehenga from "../assets/2.png";
@@ -19,7 +20,6 @@ const images = [
 const Collection = () => {
   const [collections, setCollections] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleImages = 3;
 
   // Fetch the collections data from the API
   useEffect(() => {
@@ -38,13 +38,13 @@ const Collection = () => {
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? collections.length - visibleImages : prevIndex - 1
+      prevIndex === 0 ? collections.length - 1 : prevIndex - 1
     );
   };
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === collections.length - visibleImages ? 0 : prevIndex + 1
+      prevIndex === collections.length - 1 ? 0 : prevIndex + 1
     );
   };
 
@@ -60,61 +60,49 @@ const Collection = () => {
         </p>
       </div>
 
-      {/* Introduction Section with Arrows */}
-      <div className="flex items-center justify-center w-full max-w-6xl mb-2">
-        <button
-          className="text-2xl font-bold text-gray-700 bg-white p-2 mr-4 mb-2"
-          onClick={prevSlide}
-        >
-          &lt;
-        </button>
-        <h1 className="text-[20px] sm:text-[25px] font-corm font-semibold">
-          Collection
-        </h1>
-        <button
-          className="text-2xl font-bold text-gray-700 bg-white p-2 mb-1 ml-4"
-          onClick={nextSlide}
-        >
-          &gt;
-        </button>
-      </div>
-
       {/* Carousel Section (Images) */}
       <div className="relative w-full overflow-hidden mt-5">
-        <div
-          className={`flex transition-transform ease-out duration-500 gap-4 ${
-            collections.length === 1 ? "justify-center" : ""
-          }`}
-          style={{
-            transform: `translateX(-${currentIndex * (100 / visibleImages)}%)`,
-          }}
-        >
-          {collections.map((collection, index) => (
-            <div
-              key={collection.id}
-              className={`${
-                collections.length === 1 ? "w-full" : "w-full sm:w-1/2 lg:w-1/3"
-              } flex-shrink-0`} // Full width if only one collection, adjust for different screen sizes
-            >
-              <Link to={`/collection/${collection._id}`}>
+        <div className="flex transition-transform ease-out duration-500 gap-4">
+          {collections.length > 0 && (
+            <div className="w-full flex-shrink-0">
+              <Link to={`/collection/${collections[currentIndex]._id}`}>
                 <img
-                  src={images[index % images.length]} // Assign image from the images array
-                  alt={collection.name}
-                  className="w-full h-[300px] sm:h-[400px] lg:h-[600px] object-cover cursor-pointer"
+                  src={images[currentIndex % images.length]} // Assign image from the images array
+                  alt={collections[currentIndex].name}
+                  className="w-screen h-screen sm:h-screen lg:h-screen object-cover cursor-pointer"
                 />
-                <div className="text-center mt-2">
-                  <h2 className="text-lg sm:text-2xl font-bold font-corm cursor-pointer">
-                    {collection.name}
+                <div className="absolute bottom-0 w-full text-center text-white">
+                  <h2 className="text-lg sm:text-2xl font-bold font-corm mb-2">
+                    {collections[currentIndex].name}
                   </h2>
                   <p className="text-gray-500 font-gara font-semibold">
-                    {collection.price}
-                  </p>{" "}
-                  {/* Add price if available in API */}
+                    {collections[currentIndex].price}
+                  </p>
                 </div>
               </Link>
             </div>
-          ))}
+          )}
         </div>
+      </div>
+
+      {/* Navigation Buttons */}
+      <div className="flex justify-between w-full px-4 mt-4">
+        <button
+          className="bg-gray-300 px-4 py-2 rounded-full"
+          onClick={prevSlide}
+        >
+          Previous
+        </button>
+        <button
+          className="bg-gray-300 px-4 py-2 rounded-full"
+          onClick={nextSlide}
+        >
+          Next
+        </button>
+      </div>
+
+      <div className="mt-6">
+        <img src={logo} alt="Heetesh Shah" className="w-64 h-64" />
       </div>
     </div>
   );
