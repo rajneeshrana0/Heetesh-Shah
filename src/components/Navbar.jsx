@@ -462,7 +462,7 @@ const Navbar = () => {
                     onClick={toggleMenu}
                     target="_blank"
                   >
-                    Dev and Viv
+                    Heetesh Shah
                   </Link>
                 </li>
               </ul>

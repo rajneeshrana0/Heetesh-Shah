@@ -59,6 +59,12 @@ const Sidebar = () => {
               <span>Slider Media</span>
             </Link>
           </li>
+          <li>
+            <Link to="/admin/video" className="flex items-center space-x-3 hover:bg-gray-700 p-2 rounded transition-all duration-200">
+              <FiVideo size={20} />
+              <span>Home Video</span>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
