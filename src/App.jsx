@@ -40,7 +40,7 @@ function App() {
           path="/"
           element={
             <>
-              <NewArrival />
+              {/* <NewArrival /> */}
               <Discover />
               <Collection />
               {/* <VideoHome /> */}

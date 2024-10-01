@@ -11,6 +11,7 @@ import Slider from "./Slider"; // Import Slider component
 import logo from "../assets/HS&DV/heeteshWhite.png";
 import hoverLogo from "../assets/HS&DV/Heetash.zip - 3.png";
 import VideoHome from "./VideoHome";
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -284,7 +285,7 @@ const Navbar = () => {
                           : hoverLogo
                       }
                       alt="Logo"
-                      className="h-[200px] w-[200px] lg:ml-40 transition-opacity duration-300"
+                      className="h-[200px] w-[200px] lg:ml-40 ml-24 transition-opacity duration-300"
                     />
                   </Link>
                 </div>
@@ -301,7 +302,7 @@ const Navbar = () => {
                       </a>
                       <FontAwesomeIcon
                         icon={faSearch}
-                        className="ml-2 cursor-pointer text-xl "
+                        className="ml-2 cursor-pointer text-xl hidden lg:block"
                         onClick={handleSearchClick}
                       />
                     </div>
@@ -391,7 +392,11 @@ const Navbar = () => {
                     >
                       <span>Categories:</span>
                       <span className="text-xl">
-                        {showCategories ? "-" : "+"}
+                        {showCategories ? (
+                          <IoMdArrowDropup />
+                        ) : (
+                          <IoMdArrowDropdown />
+                        )}
                       </span>
                     </li>
 
@@ -421,7 +426,11 @@ const Navbar = () => {
                     >
                       <span>Collections:</span>
                       <span className="text-xl">
-                        {showCollections ? "-" : "+"}
+                        {showCollections ? (
+                          <IoMdArrowDropup />
+                        ) : (
+                          <IoMdArrowDropdown />
+                        )}
                       </span>
                     </li>
 
@@ -462,7 +471,7 @@ const Navbar = () => {
                     onClick={toggleMenu}
                     target="_blank"
                   >
-                    Heetesh Shah
+                    DEV AND VIV
                   </Link>
                 </li>
               </ul>
