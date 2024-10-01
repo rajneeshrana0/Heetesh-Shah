@@ -84,6 +84,7 @@ function App() {
           <Route path="video-upload" element={<VideoUpload />} />
           <Route path="orders" element={<AllOrders />} />
           <Route path="media" element={<AdminMedia />} />
+          <Route path="video" element={<VideoUpload />} />
         </Route>
       </Routes>
     </div>
