@@ -4,17 +4,17 @@ import { Link } from "react-router-dom";
 import logo from "../assets/HS&DV/Heetash.zip - 1.png";
 
 // Import images from src/assets
-import redNetLehenga from "../assets/2.png";
-import deepWineLehenga from "../assets/LOOK_22_3364_720x.webp";
-import greenOrganzaLehenga from "../assets/LOOK_22_3364_720x.webp";
-import goldTissueLehenga from "../assets/LOOK_22_3364_720x.webp";
+import redNetLehenga from "../assets/2.JPG";
+// import deepWineLehenga from "../assets/LOOK_22_3364_720x.webp";
+// import greenOrganzaLehenga from "../assets/LOOK_22_3364_720x.webp";
+// import goldTissueLehenga from "../assets/LOOK_22_3364_720x.webp";
 
 // Array of images
 const images = [
   redNetLehenga,
-  deepWineLehenga,
-  greenOrganzaLehenga,
-  goldTissueLehenga,
+  // deepWineLehenga,
+  // greenOrganzaLehenga,
+  // goldTissueLehenga,
 ];
 
 const Collection = () => {
@@ -78,6 +78,9 @@ const Collection = () => {
                   <p className="text-gray-500 font-gara font-semibold">
                     {collections[currentIndex].price}
                   </p>
+                  <button className="text-center text-white mb-8 border-2 hover:bg-white hover:text-black p-2 border-white font-juli">
+                    EXPLORE
+                  </button>
                 </div>
               </Link>
             </div>
@@ -86,7 +89,7 @@ const Collection = () => {
       </div>
 
       {/* Navigation Buttons */}
-      <div className="flex justify-between w-full px-4 mt-4">
+      {/* <div className="flex justify-between w-full px-4 mt-4">
         <button
           className="bg-gray-300 px-4 py-2 rounded-full"
           onClick={prevSlide}
@@ -99,7 +102,7 @@ const Collection = () => {
         >
           Next
         </button>
-      </div>
+      </div> */}
 
       <div className="mt-6">
         <img src={logo} alt="Heetesh Shah" className="w-64 h-64" />

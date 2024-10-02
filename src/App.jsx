@@ -40,7 +40,7 @@ function App() {
           path="/"
           element={
             <>
-              <NewArrival />
+              {/* <NewArrival /> */}
               <Discover />
               <Collection />
               {/* <VideoHome /> */}
@@ -60,11 +60,11 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/about" element={<About />} />
         <Route path="/category/:id" element={<CategoryProducts />} />
-        <Route path="/carrer" element={<Carrer />} />
         <Route path="/shipping-policy" element={<Shipping />} />
         <Route path="/refund-policy" element={<Refund />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/size" element={<Size />} />
+        <Route path="/carrier" element={<Carrer />} />
         <Route path="/collection/:id" element={<CollectionProducts />} />
 
         {/* Admin Routes */}
