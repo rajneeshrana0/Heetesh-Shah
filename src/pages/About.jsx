@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/3.png";
+import logo from "../assets/2.JPG";
 import { FaGlobe, FaTruck } from "react-icons/fa";
 import Footer from "../components/Footer";
 

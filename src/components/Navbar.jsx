@@ -285,7 +285,7 @@ const Navbar = () => {
                           : hoverLogo
                       }
                       alt="Logo"
-                      className="h-[200px] w-[200px] lg:ml-40 ml-24 transition-opacity duration-300"
+                      className="h-[200px] w-[200px] lg:ml-40 ml-18 transition-opacity duration-300"
                     />
                   </Link>
                 </div>

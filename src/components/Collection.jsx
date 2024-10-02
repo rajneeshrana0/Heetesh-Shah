@@ -4,17 +4,17 @@ import { Link } from "react-router-dom";
 import logo from "../assets/HS&DV/Heetash.zip - 1.png";
 
 // Import images from src/assets
-import redNetLehenga from "../assets/2.png";
-import deepWineLehenga from "../assets/LOOK_22_3364_720x.webp";
-import greenOrganzaLehenga from "../assets/LOOK_22_3364_720x.webp";
-import goldTissueLehenga from "../assets/LOOK_22_3364_720x.webp";
+import redNetLehenga from "../assets/2.JPG";
+// import deepWineLehenga from "../assets/LOOK_22_3364_720x.webp";
+// import greenOrganzaLehenga from "../assets/LOOK_22_3364_720x.webp";
+// import goldTissueLehenga from "../assets/LOOK_22_3364_720x.webp";
 
 // Array of images
 const images = [
   redNetLehenga,
-  deepWineLehenga,
-  greenOrganzaLehenga,
-  goldTissueLehenga,
+  // deepWineLehenga,
+  // greenOrganzaLehenga,
+  // goldTissueLehenga,
 ];
 
 const Collection = () => {
