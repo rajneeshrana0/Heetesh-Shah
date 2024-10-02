@@ -167,15 +167,31 @@ const Navbar = () => {
                   onMouseLeave={() => setIsHovered(false)} // Set hover state to false on mouse leave
                 />
               </div>
+              <div className="flex justify-evenly items-center text-center">
+                  <Link to={"/"}>
+                    {/* <img
+                      src={
+                        location.pathname === "/"
+                          ? isScrolled || isHovered
+                            ? hoverLogo
+                            : logo
+                          : hoverLogo
+                      }
+                      alt="Logo"
+                      className="h-16 w-32 lg:ml-40 transition-opacity duration-300"
+                    /> */}
+                    <p className="mt-8 text-2xl font-extrabold font-juli">Heetesh Shah</p>
+                  </Link>
+                </div>
 
               {/* Navbar content (links and logo) */}
               <div
-                className={`h-[80px] flex justify-between items-center px-10 ${
+                className={` flex justify-around items-center px-10 ${
                   showMenu ? "hidden" : "" // Hide navbar content when menu is open
                 }`}
               >
                 {/* Links for desktop */}
-                <ul className="md:flex gap-10 items-center hidden">
+                <ul className="md:flex text-lg mt-2 gap-10 items-center hidden">
                   <li>
                     <Link
                       to="/"
@@ -192,7 +208,7 @@ const Navbar = () => {
                       Shop
                     </Link>
                     {/* Dynamic Shop Dropdown with Categories and Collections */}
-                    <div className="fixed inset-0 top-[50px] w-full h-96 bg-white shadow-lg hidden group-hover:flex p-5 gap-10 z-50">
+                    <div className="fixed border-t-2  mt-[65px] inset-0 top-[50px] w-full h-96 bg-white shadow-lg hidden group-hover:flex  gap-10 z-50">
                       {/* Categories Column */}
                       <div className="flex-grow ">
                         <h3 className="text-lg text-center font-semibold mb-3 font-corm">
@@ -273,21 +289,7 @@ const Navbar = () => {
                   </li>
                 </ul>
 
-                <div className="flex-grow text-center">
-                  <Link to={"/"}>
-                    <img
-                      src={
-                        location.pathname === "/"
-                          ? isScrolled || isHovered
-                            ? hoverLogo
-                            : logo
-                          : hoverLogo
-                      }
-                      alt="Logo"
-                      className="h-[200px] w-[200px] lg:ml-40 transition-opacity duration-300"
-                    />
-                  </Link>
-                </div>
+                
 
                 <ul className="flex gap-10 items-center">
                   <li>
