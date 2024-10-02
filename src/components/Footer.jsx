@@ -53,15 +53,6 @@ const Footer = () => {
                 <div className="flex flex-col mt-1">
                   <h2>{category.name.toUpperCase()}</h2>
                 </div>
-
-                {/* <li className="hover:cursor-pointer">SHERWANI</li>
-                <li className="hover:cursor-pointer">INDO WESTERN</li>
-                <li className="hover:cursor-pointer">JACKETS</li>
-                <li className="hover:cursor-pointer">BANDHGALA</li>
-                <li className="hover:cursor-pointer">KURTA SETS</li>
-                <li className="hover:cursor-pointer">SUITS</li>
-                <li className="hover:cursor-pointer">TROUSERS</li>
-                <li className="hover:cursor-pointer">SHIRTS</li> */}
               </Link>
             ))}
             <h1 className="font-extrabold">Collection</h1>
@@ -110,7 +101,7 @@ const Footer = () => {
             <li className="hover:cursor-pointer">Privacy Policy</li>
             <li className="hover:cursor-pointer">Terms of Use</li>
             <li>
-              <a href="/career" className="hover:underline">
+              <a href="/carrier" className="hover:underline">
                 Career
               </a>
             </li>
